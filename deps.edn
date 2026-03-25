@@ -34,7 +34,8 @@
                       :source-uri "https://github.com/IGJoshua/coffi/blob/{git-commit}/{filepath}#L{line}"
                       :metadata {:doc/format :markdown}}}
 
-  :build {:replace-deps {org.clojure/clojure {:mvn/version "1.12.4"}
+  :build {:extra-paths ["."]
+          :replace-deps {org.clojure/clojure {:mvn/version "1.12.4"}
                          io.github.clojure/tools.build {:mvn/version "0.10.13"}}
           :ns-default build
           :exec-fn run-tasks}
